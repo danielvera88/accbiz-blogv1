@@ -26,7 +26,7 @@ export default async function SlugPage({params}: {params: {slug: string}}){
         <div className="">
             <header className="pt-20 space-y-4 mt-12">
 
-                <div className="">
+                <div className=" max-w-3xl mx-auto">
                     <h1 className="text-5xl font-extrabold tracking-tight text-center mx-4">{data.title}</h1>
                 </div>
                 <div>

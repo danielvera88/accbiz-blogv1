@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { client } from "./lib/sanity";
 import { Post } from "./lib/interface";
 import Link from "next/link";
