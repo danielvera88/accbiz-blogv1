@@ -20,7 +20,7 @@ export default function Navbar() {
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               {/* LOGO */}
-              <Link href="/">
+              <Link href="https://www.accountingbiz.co/">
                 <Image
                   src="/logo.png"
                   width={200}
@@ -52,27 +52,39 @@ export default function Navbar() {
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
                 <li className="text-lg text-white py-8 md:px-6 text-center  hover:bg-green  border-green  md:hover:text-green md:hover:bg-transparent">
-                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                  <Link
+                    href="https://www.accountingbiz.co"
+                    onClick={() => setNavbar(!navbar)}
+                  >
                     Home
                   </Link>
                 </li>
                 <li className=" text-lg text-white py-8 px-6 text-center hover:bg-green  border-green  md:hover:text-green md:hover:bg-transparent">
-                  <Link href="#blog" onClick={() => setNavbar(!navbar)}>
+                  <Link
+                    href="https://www.accountingbiz.co/pricing"
+                    onClick={() => setNavbar(!navbar)}
+                  >
                     Plans
                   </Link>
                 </li>
                 <li className=" text-lg text-white py-8 px-6 text-center hover:bg-green  border-green  md:hover:text-green md:hover:bg-transparent">
-                  <Link href="#contact" onClick={() => setNavbar(!navbar)}>
+                  <Link
+                    href="https://www.accountingbiz.co/bookkeeping"
+                    onClick={() => setNavbar(!navbar)}
+                  >
                     Services
                   </Link>
                 </li>
                 <li className=" text-lg text-white py-8 px-6 text-center hover:bg-green  border-green  md:hover:text-green md:hover:bg-transparent">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
+                  <Link href="/" onClick={() => setNavbar(!navbar)}>
                     Resources
                   </Link>
                 </li>
                 <li className=" text-lg text-white py-8 px-6 text-center  hover:bg-green  border-green  md:hover:text-green md:hover:bg-transparent">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
+                  <Link
+                    href="https://www.accountingbiz.co/contact-us"
+                    onClick={() => setNavbar(!navbar)}
+                  >
                     Contact
                   </Link>
                 </li>
