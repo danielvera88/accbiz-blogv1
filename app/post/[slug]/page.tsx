@@ -77,8 +77,9 @@ export default async function SlugPage({
             key={post._id}
             className="my-4 mx-auto w-5/6 text-center border-black border-2 rounded-lg list-none"
           >
-            <article className=" h-44 flex flex-col justify-center items-center">
-                <div className="bg-gold p-1 fixed top-0 bottom-0 left-0"></div>
+            <article className=" h-44 md:h-52 flex flex-col justify-center items-center relative">
+            <div className="bg-gold p-1 absolute -top-3 w-20 rounded-sm font-bold text-sm">new</div>
+                <div className="bg-gold w-1 fixed top-0 bottom-0 left-0"></div>
 
               <Link href={`/post/${post.slug.current}`} prefetch className="">
                 <div className="mb-4">
