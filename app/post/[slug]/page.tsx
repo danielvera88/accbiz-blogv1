@@ -59,7 +59,7 @@ export default async function SlugPage({params}: {params: {slug: string}}){
 
             <hr className="mx-10"/>
             <h1 className="text-center my-10 text-2xl font-extrabold text-green">Recent Posts</h1>
-            <div className="flex mx-4 space-x-8 mb-12 md:flex-col md:justify-center md:items-center md:max-w-lg md:mx-auto">
+            <div className="flex mx-4 space-x-8 mb-12 md:flex-col md:justify-center md:items-center md:max-w-lg md:mx-auto md:space-x-0">
             {posts.map((post) => (
           <li
             key={post._id}
