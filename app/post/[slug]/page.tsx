@@ -75,11 +75,13 @@ export default async function SlugPage({
         {posts.map((post) => (
           <li
             key={post._id}
-            className="my-4 mx-auto w-5/6 text-center border-black border-2 rounded-lg"
+            className="my-4 mx-auto w-5/6 text-center border-black border-2 rounded-lg list-none"
           >
-            <article className="space-y-8 p-4">
+            <article className=" h-44 flex flex-col justify-center items-center">
+                <div className="bg-gold p-1 fixed top-0 bottom-0 left-0"></div>
+
               <Link href={`/post/${post.slug.current}`} prefetch className="">
-                <div className="m-4">
+                <div className="mb-4">
                   <h3 className="text-xl font-semibold leading-normal">
                     {post.title}
                   </h3>
