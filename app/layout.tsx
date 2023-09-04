@@ -19,6 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+      <meta name="google-site-verification" content="mFK-GwrttFinwCmMSY1uZTxjGmWeZa6hvIfOpVI53tM" />
+      </head>
       <body
         className={`${inter.className} bg-[#f0f0f0] text-black h-full`}
       >

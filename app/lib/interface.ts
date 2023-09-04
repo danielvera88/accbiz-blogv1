@@ -8,3 +8,10 @@ export interface Post {
     };
     _createdAt: string
 }
+
+export interface Comment{
+    name: string;
+    comment: any;
+    _id: string;
+
+}
