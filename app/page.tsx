@@ -1,21 +1,10 @@
-import { client } from "./lib/sanity";
-import { Post } from "./lib/interface";
+// import { urlFor } from "@/app/lib/sanityImageUrl";
 import Link from "next/link";
-
-async function getData() {
-  const query = `*[_type == "post"]`;
-
-  const data = await client.fetch(query);
-
-  return data;
-}
-
+import { getPosts } from "./lib/sanity";
+import Image from "next/image";
 
 export default async function Home() {
-
-
-  
-  const data = (await getData()) as Post[];
+  const data = await getPosts();
 
   return (
     <div className="my-24">
@@ -29,18 +18,16 @@ export default async function Home() {
         </p>
       </div>
 
-      <ul className="lg:grid lg:grid-cols-3">
+      <ul className="lg:grid lg:grid-cols-2">
         {data.map((post) => (
           <li
             key={post._id}
-            className="p-6 my-4 mx-auto w-5/6 text-center border-black border-2"
+            className=" my-4 mx-auto w-5/6 text-center border-gray1 border-2 rounded-md"
           >
             <article className="space-y-8 py-4">
-              <Link href={`/post/${post.slug.current}`} prefetch className="">
+              <Link href={`/post/${post.slug}`} prefetch className="">
                 <div>
-                  <h3 className="text-4xl font-bold leading-10">
-                    {post.title}
-                  </h3>
+                  <h3 className="text-4xl font-bold px-4">{post.title}</h3>
                 </div>
               </Link>
 
@@ -51,19 +38,25 @@ export default async function Home() {
                 </p>
               </div>
 
-              <p className="max-w-lg mx-auto">{post.overview}</p>
+              {post.image && (
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={250}
+                  height={100}
+                  className="w-5/6 mx-auto rounded-md object-cover"
+                />
+              )}
+
+              <p className="max-w-lg mx-auto px-4">{post.overview}</p>
 
               <button className="btn-1">
-                <a href={`/post/${post.slug.current}`}>Read more</a>
+                <Link href={`/post/${post.slug}`}>Read more</Link>
               </button>
             </article>
           </li>
         ))}
       </ul>
     </div>
-
   );
-
-
-  
 }

@@ -3,15 +3,9 @@ export interface Post {
     overview: string;
     content: any;
     _id: string;
-    slug: {
-        current: string;
-    };
+    image: string;
+    url: string;
+    slug: string;
     _createdAt: string
 }
 
-export interface Comment{
-    name: string;
-    comment: any;
-    _id: string;
-
-}
