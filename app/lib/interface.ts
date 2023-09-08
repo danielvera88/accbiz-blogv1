@@ -5,7 +5,9 @@ export interface Post {
     _id: string;
     image: string;
     url: string;
-    slug: string;
+    slug: {
+        current: string;
+      };
     _createdAt: string
 }
 

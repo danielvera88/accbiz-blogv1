@@ -27,7 +27,7 @@ export default async function Home() {
             <article className="space-y-8 py-4">
               <Link href={`/post/${post.slug}`} prefetch className="">
                 <div>
-                  <h3 className="text-4xl font-bold px-4">{post.title}</h3>
+                  <h3 className="text-4xl font-bold px-4 pt-2">{post.title}</h3>
                 </div>
               </Link>
 
@@ -42,9 +42,9 @@ export default async function Home() {
                 <Image
                   src={post.image}
                   alt={post.title}
-                  width={250}
+                  width={350}
                   height={100}
-                  className="w-5/6 mx-auto rounded-md object-cover"
+                  className="mx-auto rounded-md"
                 />
               )}
 
