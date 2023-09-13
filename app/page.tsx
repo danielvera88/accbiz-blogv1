@@ -18,41 +18,39 @@ export default async function Home() {
         </p>
       </div>
 
-      <ul className="lg:grid lg:grid-cols-2">
+      <ul className="lg:grid lg:grid-cols-3">
         {data.map((post) => (
           <li
             key={post._id}
-            className=" my-4 mx-auto w-5/6 text-center border-gray1 border-2 rounded-md"
+            className=" my-4 mx-8 text-center rounded-xl space-y-8"
           >
-            <article className="space-y-8 py-4">
-              <Link href={`/post/${post.slug}`} prefetch className="">
-                <div>
-                  <h3 className="text-4xl font-bold px-4 pt-2">{post.title}</h3>
-                </div>
-              </Link>
-
-              <div>
-                <p>
-                  Published:{" "}
-                  {new Date(post._createdAt).toISOString().split("T")[0]}
-                </p>
-              </div>
-
+            <article className="space-y-4 pb-4">
               {post.image && (
                 <Image
                   src={post.image}
                   alt={post.title}
                   width={350}
                   height={100}
-                  className="mx-auto rounded-md"
+                  className=" rounded-md mx-auto mt-2 object-fill"
                 />
               )}
+              <Link href={`/post/${post.slug}`} prefetch>
+                <div className="mx-auto max-w-sm">
+                  <h3 className="text-4xl font-bold px-4 mt-4">{post.title}</h3>
+                </div>
+              </Link>
 
-              <p className="max-w-lg mx-auto px-4">{post.overview}</p>
+              <div>
+                <p className="text-sm font-light">
+                  Published:{" "}
+                  {new Date(post._createdAt).toISOString().split("T")[0]}
+                </p>
+              </div>
 
               <button className="btn-1">
                 <Link href={`/post/${post.slug}`}>Read more</Link>
               </button>
+              <div className="bg-gray2 w-20 h-1 rounded-2xl mx-auto" />
             </article>
           </li>
         ))}

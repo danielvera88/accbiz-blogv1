@@ -8,8 +8,8 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Business Tips",
-  description: "Accounting Biz Blog",
+  title: "Accounting Biz Blog",
+  description: "Business Tips for your business.",
 };
 
 export default function RootLayout({
@@ -20,11 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <meta name="google-site-verification" content="mFK-GwrttFinwCmMSY1uZTxjGmWeZa6hvIfOpVI53tM" />
+        <meta
+          name="google-site-verification"
+          content="mFK-GwrttFinwCmMSY1uZTxjGmWeZa6hvIfOpVI53tM"
+        />
       </head>
-      <body
-        className={`${inter.className} bg-[#f0f0f0] text-black h-full`}
-      >
+      <body className={`${inter.className} bg-[#f0f0f0] text-black h-full`}>
         <Navbar />
         {children}
         <Analytics />

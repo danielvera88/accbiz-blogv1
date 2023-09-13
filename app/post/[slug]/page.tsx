@@ -12,6 +12,19 @@ async function getData(slug: string) {
   return data;
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const data = (await getData(params.slug)) as Post;
+
+  return {
+    title: data.title,
+    description: data.overview,
+  };
+}
+
 export default async function SlugPage({
   params,
 }: {
