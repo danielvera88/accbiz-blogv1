@@ -13,13 +13,13 @@ export const client = createClient({
 });
 
 export async function getPosts(): Promise<Post[]>{
+  
 
  return client.fetch(
-    groq`*[_type == "post"]{
+    groq`*[_type == "post"] | order(_id) {
       _id,
       _createdAt,
       title,
-      overview,
       "slug": slug.current,
       "image": image.asset->url,
       url

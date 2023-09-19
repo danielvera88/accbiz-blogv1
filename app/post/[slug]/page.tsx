@@ -22,6 +22,12 @@ export async function generateMetadata({
   return {
     title: data.title,
     description: data.overview,
+    alternates: {
+      canonical: `/post/${data.slug.current}`,
+      languages: {
+        "en-US": `/en-US/post/${data.slug.current}`,
+      },
+    },
   };
 }
 

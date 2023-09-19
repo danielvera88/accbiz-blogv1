@@ -8,8 +8,16 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Accounting Biz Blog",
+  metadataBase: new URL("https://www.accountingbiz.ai/"),
+  title: {
+    default: "Accounting Biz Blog",
+    template: `%s | Accounting Biz Blog`,
+  },
   description: "Business Tips for your business.",
+  verification: {
+    google:
+      "google-site-verification=mFK-GwrttFinwCmMSY1uZTxjGmWeZa6hvIfOpVI53tM",
+  },
 };
 
 export default function RootLayout({
