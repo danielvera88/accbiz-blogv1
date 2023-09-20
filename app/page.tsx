@@ -2,12 +2,13 @@
 import Link from "next/link";
 import { getPosts } from "./lib/sanity";
 import Image from "next/image";
+import Socialmedia from "./components/Socialmedia";
 
 export default async function Home() {
   const data = await getPosts();
 
   return (
-    <div className="my-24">
+    <div className="mt-24">
       <div className="mx-auto text-center space-y-4 py-10">
         <h1 className="text-5xl font-semibold">Business Tips</h1>
         <h2 className=" text-gold font-semibold text-lg">
@@ -36,7 +37,7 @@ export default async function Home() {
               )}
               <Link href={`/post/${post.slug}`} prefetch>
                 <div className="mx-auto max-w-sm">
-                  <h3 className="text-4xl font-bold px-4 mt-4">{post.title}</h3>
+                  <h3 className="text-2xl font-bold px-4 mt-4">{post.title}</h3>
                 </div>
               </Link>
 
@@ -55,6 +56,7 @@ export default async function Home() {
           </li>
         ))}
       </ul>
+      <Socialmedia />
     </div>
   );
 }
