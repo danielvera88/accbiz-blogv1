@@ -3,6 +3,13 @@ import { client, getListPost } from "@/app/lib/sanity";
 import { urlFor } from "@/app/lib/sanityImageUrl";
 import { PortableText } from "@portabletext/react";
 import Link from "next/link";
+import { BsFillShareFill } from "react-icons/bs";
+import {
+  AiFillFacebook,
+  AiFillInstagram,
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+} from "react-icons/ai";
 
 async function getData(slug: string) {
   const query = `*[_type=="post" && slug.current == "${slug}"][0]`;
@@ -53,7 +60,7 @@ export default async function SlugPage({
   const postList = await getListPost();
 
   return (
-    <div className="">
+    <div>
       <header className="pt-20 space-y-4 mt-12">
         <div className=" max-w-3xl mx-auto">
           <h1 className="text-5xl font-extrabold tracking-tight text-center mx-4">
@@ -69,6 +76,19 @@ export default async function SlugPage({
           </div>
         </div>
       </header>
+
+      <div className="flex justify-center items-center pt-10">
+        <div className="flex items-center  rounded-full p-2 pr-4">
+          <p className="text-sm font-semibold mx-2">Share</p>
+          <BsFillShareFill className="" />
+        </div>
+        <div className="flex text-xl space-x-3 p-1 rounded-lg">
+          <AiFillFacebook />
+          <AiFillInstagram />
+          <AiFillTwitterCircle />
+          <AiFillLinkedin />
+        </div>
+      </div>
 
       <div className="divide-y divide-gray-200 py-7 max-w-4xl mx-auto">
         <div>

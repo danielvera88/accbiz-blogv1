@@ -9,10 +9,7 @@ import {
 export default function Socialmedia() {
   return (
     <div>
-      <div className=" bg-gray2 py-6">
-        <h5 className="text-center mb-3 font-bold text-gold text-2xl">
-          Follow us!
-        </h5>
+      <div className=" py-6">
         <div className="flex justify-center items-center text-2xl space-x-8 text-black">
           <a href="">
             <AiFillFacebook />

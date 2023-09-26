@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     default: "Accounting Biz Blog",
     template: `%s | Accounting Biz Blog`,
   },
-  description: "Business Tips for your business.",
+  description:
+    " Accounting Biz supports businesses with Accounting services, Bookkeeping, Payroll, and Taxes. Tips from the professionals.We offer tips for small or large businesses and we are always posting new tips to help entrepreneurs.",
   verification: {
     google:
       "google-site-verification=mFK-GwrttFinwCmMSY1uZTxjGmWeZa6hvIfOpVI53tM",
