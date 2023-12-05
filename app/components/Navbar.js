@@ -22,7 +22,7 @@ export default function Navbar() {
               {/* LOGO */}
               <Link href="https://www.accountingbiz.co/">
                 <Image
-                  src="/logo.png"
+                  src="/new_logo_light.png"
                   width={200}
                   height={30}
                   alt="logo"

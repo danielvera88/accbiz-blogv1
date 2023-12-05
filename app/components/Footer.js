@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <a href="https://www.accountingbiz.co/">
             <Image
-              src="/logo.png"
+              src="/new_logo_light.png"
               width={200}
               height={100}
               alt="logo"

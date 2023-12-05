@@ -98,6 +98,27 @@ export default async function SlugPage({
         </div>
       </div>
 
+      <div className="flex justify-center items-center mx-auto bg-gray1 p-4">
+        <button className="bg-white p-4 rounded-xl font-semibold hover:bg-green hover:text-white delay-75 duration-75">
+          <a href="https://accountingbiz.kartra.com/calendar/On-boarding">
+            Request Info or Schedule a Call
+          </a>
+        </button>
+      </div>
+
+      {/* <div
+        className="js_kt_asset_embed js_kartra_trackable_object"
+        data-kt-type="calendar"
+        data-kt-embed="inline"
+        data-kt-value="QN6kd34xm8rK"
+        data-kt-owner="QpNz8ZpW"
+        data-kt-accent="#39b9dd"
+      ></div>
+      <script
+        type="text/javascript"
+        src="https://app.kartra.com/js/build/front/embed/calendar.js"
+      ></script> */}
+
       <hr className="mx-10" />
       <h1 className="text-center my-10 text-2xl font-extrabold text-green">
         Recent Posts
